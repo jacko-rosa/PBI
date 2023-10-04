@@ -32,5 +32,6 @@ Anotações
             modelo conceitual - define os conceitos e as relações entre os dados
             modelo lógico - especifica como os dados serão armazenados e como as relações serão representadas em um banco de dados
             modelo físico - descreve como os dados serão armazenados em um sistema de armazenamento específico
-        
+    O que são Ciências Contábeis?
+        è um campo de estudo que envolve o registro, classificação e análise de transações financeiras, sejam elas compras, vendas, pagamentos, recebimentos, investimentos e entre outros
 
