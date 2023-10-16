@@ -14,6 +14,9 @@ Links
         https://www.datascienceacademy.com.br/course/analise-de-dados-com-microsoft-power-bi-e-clinica-de-bi-dsa
     Visualização de Dados e Design de Dashboards
         https://www.datascienceacademy.com.br/course/cincia-de-dados-aplicada
+    Drivers:
+        SqlLite:
+            https://www.devart.com/odbc/sqlite/
 Anotações
     O Que é Business Intelligence?
         Business Intelligence (BI) é um conjunto de técnicas e ferramentas utilizadas para transformar dados em informações úteis para a tomada de decisão empresarial
@@ -36,4 +39,14 @@ Anotações
             modelo físico - descreve como os dados serão armazenados em um sistema de armazenamento específico
     O que são Ciências Contábeis?
         è um campo de estudo que envolve o registro, classificação e análise de transações financeiras, sejam elas compras, vendas, pagamentos, recebimentos, investimentos e entre outros
+    O que é Machine Learning (Aprendizado de Máquina)?
+        é uma área da Inteligência Artificial (IA) que se concentra no desenvolvimento de algoritmos e técnicas que permitem que os computadores aprendam a executar tarefas sem serem explicitamente programados
+        Aprendizado Supervisionado:
+            é treinado com um conjunto de dados rotulados, ou seja, com entradas e saídas conhecidas
+        Aprendizado Não Supervisionado:
+            é treinado com um conjunto de dados não rotulados, e seu objetivo é encontrar padrões e estruturas subjacentes nos dados
+        Aprendizado Por Reforço:
+            é treinado com uma recompensa/punção ajustando suas ações para maximizar as recompensas a longo prazo.
+
+
 
