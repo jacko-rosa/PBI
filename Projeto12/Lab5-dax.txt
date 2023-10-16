@@ -1,0 +1,15 @@
+let
+    Fonte = Csv.Document(File.Contents("D:\Usuários\Jackson\Projetos\Estudos\DSA\PBI\Projeto12\dataset\Clientes.csv"),[Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos_Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Tipo_Alterado" = Table.TransformColumnTypes(#"Cabeçalhos_Promovidos",{{"ID_Cliente", type text}, {"Idade", type text}, {"Peso", Int64.Type}, {"Altura", Int64.Type}, {"Estado Civil", type text}, {"Estado", type text}, {"Limite de Credito", Int64.Type}, {"Valor Desconto", Int64.Type}, {"Valor Compra", Int64.Type}, {"Tipo de Cliente", type text}}),
+    #"Idade_Alterada" = Table.ReplaceValue(#"Tipo_Alterado","?","45", Replacer.ReplaceText,{"Idade"}),
+    #"Tipo_Idade_Numerico" = Table.TransformColumnTypes(#"Idade_Alterada", {{"Idade", Int64.Type}}),
+    #"Estado_Civil_Removido" = Table.RemoveColumns(#"Tipo_Idade_Numerico", {"Estado Civil"}),
+    #"Coluna_Adicionada" = Table.AddColumn(#"Estado_Civil_Removido", "Valor Final", each [Valor Compra] - [Valor Desconto]),
+    #"Dividir_Coluna_Pela_Posicao" = Table.SplitColumn(#"Coluna_Adicionada", "ID_Cliente", Splitter.SplitTextByPositions({0,4},false),{"Id.1","Id.2"}),
+    #"Coluna_Dividida" = Table.TransformColumnTypes(#"Dividir_Coluna_Pela_Posicao",{{"Id.1", type text}, {"Id.2", Int64.Type}}),
+    #"Coluna_Renomeada"=Table.RenameColumns(#"Coluna_Dividida",{{"Id.1", "Codigo"}, {"Id.2", "ID"}}),
+    #"Coluna_Condicional" = Table.AddColumn(#"Coluna_Renomeada", "% Desconto Especial", each if [Tipo de Cliente] = "Bronze" then 5 else if [Tipo de Cliente] = "Prata" then 10 else if [Tipo de Cliente] = "Ouro" then 15 else if [Tipo de Cliente] = "Diamante" then 20 else 0),
+    #"Logaritimo_Base10" = Table.TransformColumns(#"Coluna_Condicional",{{"Limite de Credito", Number.Log10, type number}})
+in
+    #"Logaritimo_Base10"
