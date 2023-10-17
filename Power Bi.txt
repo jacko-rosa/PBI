@@ -4,16 +4,11 @@ Bibliografias
 Links
     Power BI
         https://powerbi.microsoft.com/pt-br/
+        https://learn.microsoft.com/pt-br/power-bi
         M:
             https://learn.microsoft.com/pt-br/powerquery-m/
-    Documentação do Power BI
-        https://learn.microsoft.com/pt-br/power-bi
-    Power BI Avançado Para Análise de Dados com DAX
-        https://www.datascienceacademy.com.br/course/power-bi-avancado-para-analise-de-dados-com-dax
-    Análise de Dados com Microsoft Power BI e Clínica de BI
-        https://www.datascienceacademy.com.br/course/analise-de-dados-com-microsoft-power-bi-e-clinica-de-bi-dsa
-    Visualização de Dados e Design de Dashboards
-        https://www.datascienceacademy.com.br/course/cincia-de-dados-aplicada
+    Python
+        https://pypi.org/project/powerbiclient/
     Drivers:
         SqlLite:
             https://www.devart.com/odbc/sqlite/
