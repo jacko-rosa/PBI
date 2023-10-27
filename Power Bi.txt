@@ -12,6 +12,13 @@ Links
     Drivers:
         SqlLite:
             https://www.devart.com/odbc/sqlite/
+    Linguagem R:
+        manual:
+            https://cran.r-project.org/manuals.html
+        Interpretador:
+            https://cran.r-project.org/
+        IDE:
+            https://posit.co/download/rstudio-desktop/
 Anotações
     O Que é Business Intelligence?
         Business Intelligence (BI) é um conjunto de técnicas e ferramentas utilizadas para transformar dados em informações úteis para a tomada de decisão empresarial
